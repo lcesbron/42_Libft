@@ -14,7 +14,7 @@ RM = rm -rf
 # --- FILES ---
 
 MAKE_DIR = .make/
-BUILD_DIR = $(addprefix $(MAKE_DIR), build)/
+BUILD_DIR = $(addprefix $(MAKE_DIR), build/)
 
 SRC_DIR = srcs/
 INCLUDE_DIR = includes/
