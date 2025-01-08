@@ -1,7 +1,5 @@
 NAME = libft.a
 
-# --- 
-
 # --- CONFIG ---
 
 CC = cc
@@ -16,20 +14,21 @@ RM = rm -rf
 # --- FILES ---
 
 MAKE_DIR = .make/
-BUILD_DIR = $(addprefix $(MAKE_DIR), build)
+BUILD_DIR = $(addprefix $(MAKE_DIR), build)/
 
 SRC_DIR = srcs/
 INCLUDE_DIR = includes/
 
 SRCS = 
 
-OBJS = $(patsubst %.c, $(BUILD_DIR)%.o, $(notdir $(SRCS)))
+OBJS = $(patsubst %.c, $(BUILD_DIR)%.o, $(SRCS))
 
-DEPS = $(patsubst %.c, $(BUILD_DIR)%.d, $(notdir $(SRCS)))
+DEPS = $(patsubst %.c, $(BUILD_DIR)%.d, $(SRCS))
 
 # --- FT_PRINTF ---
 
-FT_PRINTF_DIR = $(addprefix $(SRC_DIR), ft_printf)
+#FT_PRINTF_DIR = $(addprefix $(SRC_DIR), ft_printf)/
+FT_PRINTF_DIR = ft_printf/
 
 FT_PRINTF_SRCS =	ft_appends.c \
 					ft_fill.c \
@@ -38,20 +37,22 @@ FT_PRINTF_SRCS =	ft_appends.c \
 					ft_lens.c \
 					ft_printf.c \
 
-SRCS += $(addprefix $(FT_PRINTF_DIR), $(FT_PRINTF_SRC))
+SRCS += $(addprefix $(FT_PRINTF_DIR), $(FT_PRINTF_SRCS))
 
 # --- GET_NEXT_LINE ---
 
-GET_NEXT_LINE_DIR = $(addprefix $(SRC_DIR), get_next_line)
+#GET_NEXT_LINE_DIR = $(addprefix $(SRC_DIR), get_next_line)/
+GET_NEXT_LINE_DIR = get_next_line/
 
 GET_NEXT_LINE_SRCS = 	get_next_line.c \
 						get_next_line_utils.c \
 
-SRCS += $(addprefix $(FT_PRINTF_DIR), $(FT_PRINTF_SRC))
+SRCS += $(addprefix $(GET_NEXT_LINE_DIR), $(GET_NEXT_LINE_SRCS))
 
 # --- CHAR ---
 
-CHAR_DIR = $(addprefix $(SRC_DIR), char)
+#CHAR_DIR = $(addprefix $(SRC_DIR), char)/
+CHAR_DIR = char/
 
 CHAR_SRCS =	ft_isalpha.c \
 			ft_isalnum.c \
@@ -65,7 +66,8 @@ SRCS += $(addprefix $(CHAR_DIR), $(CHAR_SRCS))
 
 # --- STR ---
 
-STR_DIR = $(addprefix $(SRC_DIR), str)
+#STR_DIR = $(addprefix $(SRC_DIR), str)/
+STR_DIR = str/
 
 STR_SRCS = 	ft_strlen.c \
     	   	ft_strchr.c \
@@ -88,7 +90,8 @@ SRCS += $(addprefix $(STR_DIR), $(STR_SRCS))
 
 # --- FD ---
 
-FD_DIR = $(addprefix $(SRC_DIR), fd)
+#FD_DIR = $(addprefix $(SRC_DIR), fd)/
+FD_DIR = fd/
 
 FD_SRCS = 	ft_putchar_fd.c \
 			ft_putstr_fd.c \
@@ -99,7 +102,8 @@ SRCS += $(addprefix $(FD_DIR), $(FD_SRCS))
 
 # --- MEM ---
 
-MEM_DIR = $(addprefix $(SRC_DIR), mem)
+#MEM_DIR = $(addprefix $(SRC_DIR), mem)/
+MEM_DIR = mem/
 
 MEM_SRCS = 	ft_memset.c \
 			ft_bzero.c \
@@ -113,7 +117,8 @@ SRCS += $(addprefix $(MEM_DIR), $(MEM_SRCS))
 
 # --- LST --- 
 
-LST_DIR = $(addprefix $(SRC_DIR), lst)
+#LST_DIR = $(addprefix $(SRC_DIR), lst)/
+LST_DIR = lst/
 
 LST_SRCS = 	ft_lstnew_bonus.c \
 			ft_lstadd_front_bonus.c \
@@ -129,8 +134,17 @@ SRCS += $(addprefix $(LST_DIR), $(LST_SRCS))
 
 all: $(NAME)
 
-%.o: %.c
-	$(CC) $(CFLAGS) $(CPPFLAGS) -o $()
+$(BUILD_DIR)%.o: $(SRC_DIR)%.c
+	mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+
+clean:
+	$(RM) $(MAKE_DIR)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
