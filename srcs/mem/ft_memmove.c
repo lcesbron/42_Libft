@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcesbron <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:33:50 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/11/06 14:51:29 by lcesbron         ###   ########.fr       */
+/*   Updated: 2025/01/08 21:14:22 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "mem.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

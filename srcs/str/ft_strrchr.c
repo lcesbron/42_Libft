@@ -6,11 +6,11 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:09:29 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/11/07 14:19:16 by lcesbron         ###   ########.fr       */
+/*   Updated: 2025/01/08 21:21:50 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "str.h"
 #include <stddef.h>
 
 char	*ft_strrchr(const char *s, int c)

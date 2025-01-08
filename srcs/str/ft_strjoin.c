@@ -6,11 +6,11 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 09:30:21 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/11/12 14:25:38 by lcesbron         ###   ########.fr       */
+/*   Updated: 2025/01/08 21:20:28 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "str.h"
 #include <stdlib.h>
 #include <stddef.h>
 

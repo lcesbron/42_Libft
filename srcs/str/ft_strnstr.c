@@ -6,11 +6,11 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:12:27 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/11/07 18:36:24 by lcesbron         ###   ########.fr       */
+/*   Updated: 2025/01/08 21:21:40 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "str.h"
 #include <stddef.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)

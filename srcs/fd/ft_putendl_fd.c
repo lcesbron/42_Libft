@@ -6,11 +6,11 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 19:50:35 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/11/12 19:54:02 by lcesbron         ###   ########.fr       */
+/*   Updated: 2025/01/08 21:09:37 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "fd.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

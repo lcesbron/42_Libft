@@ -6,11 +6,11 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:01:40 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/11/13 14:04:00 by lcesbron         ###   ########.fr       */
+/*   Updated: 2025/01/08 21:11:51 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lst.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

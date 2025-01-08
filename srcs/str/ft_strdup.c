@@ -6,11 +6,11 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:05:32 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/11/12 14:24:59 by lcesbron         ###   ########.fr       */
+/*   Updated: 2025/01/08 21:20:14 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "str.h"
 #include <stdlib.h>
 
 char	*ft_strdup(const char *s)

@@ -4,7 +4,7 @@ NAME = libft.a
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-CPPFLAGS = -I $(INCLUDE_DIR)
+CPPFLAGS = -I $(INCLUDE_DIR) -MMD -MP
 
 AR = ar
 ARFLAGS = -rcs
@@ -132,19 +132,35 @@ LST_SRCS = 	ft_lstnew_bonus.c \
 
 SRCS += $(addprefix $(LST_DIR), $(LST_SRCS)) 
 
+.PHONY: all
 all: $(NAME)
 
 $(BUILD_DIR)%.o: $(SRC_DIR)%.c
-	mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+	@mkdir -p $(dir $@)
+	@$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+	@echo "[$(GREEN)✓$(NC)] $(notdir $<)"
 
 $(NAME): $(OBJS)
-	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+	@$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+	@echo "[$(GREEN)✓$(NC)] $(BOLD)$(NAME)$(NC)"
 
+.PHONY: clean
 clean:
-	$(RM) $(MAKE_DIR)
+	@$(RM) $(MAKE_DIR)
+	@echo "[$(GREEN)✓$(NC)] $(BOLD)Clean$(NC)"
 
+.PHONY: fclean
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
+	@echo "[$(GREEN)✓$(NC)] $(BOLD)Full Clean$(NC)"
 
+.PHONY: re
 re: fclean all
+
+-include $(DEPS)
+
+# --- COLORS ---
+
+NC		=	\e[0m
+BOLD	=	\033[1m
+GREEN 	= 	\033[32m

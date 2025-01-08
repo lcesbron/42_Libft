@@ -6,11 +6,11 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:25:11 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/11/12 14:23:36 by lcesbron         ###   ########.fr       */
+/*   Updated: 2025/01/08 21:20:43 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "str.h"
 #include <stddef.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)

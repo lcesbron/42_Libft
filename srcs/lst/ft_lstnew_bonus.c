@@ -6,13 +6,13 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 20:37:33 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/11/12 20:52:03 by lcesbron         ###   ########.fr       */
+/*   Updated: 2025/01/08 21:12:16 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stddef.h>
-#include "libft.h"
+#include "lst.h"
 
 t_list	*ft_lstnew(void *content)
 {

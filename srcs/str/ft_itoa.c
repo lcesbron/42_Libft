@@ -6,11 +6,12 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:29:41 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/11/12 19:12:46 by lcesbron         ###   ########.fr       */
+/*   Updated: 2025/01/08 21:15:39 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "mem.h"
+#include "str.h"
 #include <stddef.h>
 
 static int	ft_num_len(int n)

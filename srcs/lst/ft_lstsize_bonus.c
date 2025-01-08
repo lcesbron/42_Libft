@@ -6,11 +6,11 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 21:10:56 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/11/13 16:11:40 by lcesbron         ###   ########.fr       */
+/*   Updated: 2025/01/08 21:12:24 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lst.h"
 
 int	ft_lstsize(t_list *lst)
 {

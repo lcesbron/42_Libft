@@ -6,11 +6,10 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:15:30 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/11/21 13:50:39 by lcesbron         ###   ########lyon.fr   */
+/*   Updated: 2025/01/08 21:21:07 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stddef.h>
 
 size_t	ft_strlen(const char *s)

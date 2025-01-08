@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcesbron <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:50:22 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/11/07 09:12:57 by lcesbron         ###   ########.fr       */
+/*   Updated: 2025/01/08 21:20:50 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "str.h"
 #include <stddef.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)

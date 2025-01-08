@@ -6,11 +6,11 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 09:43:50 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/11/12 11:28:20 by lcesbron         ###   ########.fr       */
+/*   Updated: 2025/01/08 21:22:02 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "str.h"
 #include <stddef.h>
 
 static int	ft_isinset(int c, char const *set)

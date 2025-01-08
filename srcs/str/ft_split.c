@@ -6,13 +6,14 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:30:27 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/11/21 13:50:21 by lcesbron         ###   ########lyon.fr   */
+/*   Updated: 2025/01/08 21:22:48 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "str.h"
 #include <unistd.h>
 #include <stddef.h>
+#include <stdlib.h>
 
 static void	*ft_freeall(char **tab, int strings)
 {
