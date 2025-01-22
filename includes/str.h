@@ -6,14 +6,14 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 18:54:52 by lcesbron          #+#    #+#             */
-/*   Updated: 2025/01/08 18:55:50 by lcesbron         ###   ########lyon.fr   */
+/*   Updated: 2025/01/22 17:33:37 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STR_H
 # define STR_H
 
-#include <stddef.h>
+# include <stddef.h>
 
 size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
@@ -31,6 +31,5 @@ char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-
 
 #endif

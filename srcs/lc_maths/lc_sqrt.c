@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   lc_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/08 18:55:55 by lcesbron          #+#    #+#             */
-/*   Updated: 2025/01/22 16:26:05 by lcesbron         ###   ########lyon.fr   */
+/*   Created: 2025/01/22 14:08:40 by lcesbron          #+#    #+#             */
+/*   Updated: 2025/01/22 17:33:12 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+int	lc_int_sqrt(int nb)
+{
+	int	i;
+	int	j;
 
-# include "char.h"
-# include "fd.h"
-# include "mem.h"
-# include "str.h"
-# include "lst.h"
-# include "get_next_line.h"
-# include "ft_printf.h"
-# include "lc_maths.h"
-
-#endif
+	i = 0;
+	j = 1;
+	while (j * j <= nb || i * i >= nb)
+	{
+		i++;
+		j++;
+	}
+	return (j);
+}
