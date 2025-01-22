@@ -132,6 +132,16 @@ LST_SRCS = 	ft_lstnew_bonus.c \
 
 SRCS += $(addprefix $(LST_DIR), $(LST_SRCS)) 
 
+# --- MATHS ---
+
+MATHS_DIR = lc_maths/
+
+MATHS_SRCS = lc_sqrt.c
+
+SRCS += $(addprefix $(MATHS_DIR), $(MATHS_SRCS))
+
+# -- RULES ---
+
 .PHONY: all
 all: $(NAME)
 
