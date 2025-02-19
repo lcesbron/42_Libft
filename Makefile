@@ -112,6 +112,7 @@ MEM_SRCS = 	ft_memset.c \
 			ft_memchr.c \
 			ft_memcmp.c \
 			ft_calloc.c \
+			ft_swap.c
 
 SRCS += $(addprefix $(MEM_DIR), $(MEM_SRCS)) 
 
