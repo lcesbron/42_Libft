@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lc_maths.h                                         :+:      :+:    :+:   */
+/*   lc_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/22 14:29:46 by lcesbron          #+#    #+#             */
-/*   Updated: 2025/02/19 11:21:13 by lcesbron         ###   ########lyon.fr   */
+/*   Created: 2025/02/19 11:20:00 by lcesbron          #+#    #+#             */
+/*   Updated: 2025/02/19 11:21:47 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LC_MATHS_H
-# define LC_MATHS_H
+#include <stdint.h>
 
-# include <stdint.h>
+int32_t	lc_abs(int32_t v)
+{
+	int32_t	mask;
 
-int		lc_int_sqrt(int nb);
-int32_t	lc_abs(int32_t v);
-
-#endif
+	mask = v >> 31;
+	return ((v + mask) ^ mask);
+}

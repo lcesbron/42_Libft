@@ -137,7 +137,8 @@ SRCS += $(addprefix $(LST_DIR), $(LST_SRCS))
 
 MATHS_DIR = lc_maths/
 
-MATHS_SRCS = lc_sqrt.c
+MATHS_SRCS =	lc_sqrt.c \
+				lc_abs.c
 
 SRCS += $(addprefix $(MATHS_DIR), $(MATHS_SRCS))
 
