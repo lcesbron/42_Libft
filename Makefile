@@ -61,6 +61,7 @@ CHAR_SRCS =	ft_isalpha.c \
 			ft_isprint.c \
 			ft_tolower.c \
 			ft_toupper.c \
+			lc_isspace.c
 
 SRCS += $(addprefix $(CHAR_DIR), $(CHAR_SRCS)) 
 
