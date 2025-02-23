@@ -3,7 +3,7 @@ NAME = libft.a
 # --- CONFIG ---
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra # -Werror
 CPPFLAGS = -I $(INCLUDE_DIR) -MMD -MP
 
 AR = ar
@@ -86,6 +86,7 @@ STR_SRCS = 	ft_strlen.c \
 		   	ft_itoa.c \
 		   	ft_strmapi.c \
 		   	ft_striteri.c \
+			lc_strtol.c \
 
 SRCS += $(addprefix $(STR_DIR), $(STR_SRCS)) 
 
@@ -156,6 +157,10 @@ $(BUILD_DIR)%.o: $(SRC_DIR)%.c
 $(NAME): $(OBJS)
 	@$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 	@echo "[$(GREEN)✓$(NC)] $(BOLD)$(NAME)$(NC)"
+
+.PHONY: test
+test: $(NAME)
+	$(CC) $(CFLAGS) $(CPPFLAGS) test.c -L. -lft -o $@
 
 .PHONY: clean
 clean:

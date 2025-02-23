@@ -13,8 +13,9 @@
 #include "char.h"
 #include "limits.h"
 
-static void init_strtol( char **str, unsigned long int *cutoff, int *cutlim, int *neg, int base)
+static void init_strtol(char **str, char **endptr, char *error, int *neg)
 {
+	*endptr = *str;
 	while (lc_isspace(**str))
 		++(*str);
 	if (**str == '-' || **str == '+')
@@ -24,49 +25,35 @@ static void init_strtol( char **str, unsigned long int *cutoff, int *cutlim, int
 	}
 	else
 		*neg = 1; 
-	if (*neg > 0)
-		*cutoff = LONG_MAX;
-	else if (*neg < 0)
-		*cutoff =  - LONG_MIN;
-	*cutoff /= base;
-	*cutlim = *cutoff % base;
+	*error = 0;
 }
 
-long lc_strtol(char *str, char **endptr, int base)
+long int lc_strtol(char *str, char **endptr, int base)
 {
-	long int			ret;
-	unsigned long int	cutoff;
-	int					cutlim;
-	int 				neg;
-	char				c;
+	long int	ret;
+	int 		neg;
+	char		c;
+	char		error;
 
 	ret = 0;
-	init_strtol(&str, &cutoff, &cutlim, &neg, base);
+	init_strtol(&str, endptr, &error, &neg);
 	while (ft_isalnum(*str))
 	{
 		if (ft_isdigit(*str))
 			c = *str - '0';
 		else
 			c = ft_tolower(*str) - 'a' + 10;
-		if (c < base && !(ret > cutoff) && !(ret == cutoff && c > cutlim))
-			ret = ret * base + c;
+		if (c >= base || ((long)(ret * base + c) / base != ret 
+			&& !(neg == -1 && (long)(ret * base + c) == LONG_MIN)))
+			error = 1;
 		else
-			return (-1);
+			ret = ret * base + c;
 		str++;
 	}
-	*endptr = str;
-	return (ret * neg);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	char *test = "42 54 456 65454 ff 9223372036854775807";
-	printf("%ld\n", lc_strtol(test, &test, 10));
-	printf("%ld\n", lc_strtol(test, &test, 10));
-	printf("%ld\n", lc_strtol(test, &test, 10));
-	printf("%ld\n", lc_strtol(test, &test, 10));
-	printf("%ld\n", lc_strtol(test, &test, 16));
-	printf("%ld\n", lc_strtol(test, &test, 10));
+	if (!error)
+	{
+		*endptr = str;
+		return (ret * neg);
+	}
+	return (-1);
 }
