@@ -51,9 +51,6 @@ long int lc_strtol(char *str, char **endptr, int base)
 		str++;
 	}
 	if (!error)
-	{
-		*endptr = str;
-		return (ret * neg);
-	}
+		return (*endptr = str, ret * neg);
 	return (-1);
 }
