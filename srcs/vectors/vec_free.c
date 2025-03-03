@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lc_isspace.c                                       :+:      :+:    :+:   */
+/*   vec_free.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 15:31:34 by lcesbron          #+#    #+#             */
-/*   Updated: 2025/03/03 18:46:31 by lcesbron         ###   ########lyon.fr   */
+/*   Created: 2025/03/03 18:40:51 by lcesbron          #+#    #+#             */
+/*   Updated: 2025/03/03 18:43:21 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	lc_isspace(char c)
+#include "vectors.h"
+#include <stdlib.h>
+
+void	vec_free(t_vec *vec)
 {
-	return ((c >= 9 && c <= 13) || c == ' ');
+	free(vec->data);
+	vec->data = NULL;
 }

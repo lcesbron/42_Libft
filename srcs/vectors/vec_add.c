@@ -1,16 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lc_isspace.c                                       :+:      :+:    :+:   */
+/*   vec_add.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 15:31:34 by lcesbron          #+#    #+#             */
-/*   Updated: 2025/03/03 18:46:31 by lcesbron         ###   ########lyon.fr   */
+/*   Created: 2025/03/03 17:29:06 by lcesbron          #+#    #+#             */
+/*   Updated: 2025/03/03 18:45:11 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	lc_isspace(char c)
+#include "vectors.h"
+#include "mem.h" 
+
+void	vec_add(t_vec **vec, void *el)
 {
-	return ((c >= 9 && c <= 13) || c == ' ');
+	if (!((*vec)->data) || (*vec)->size + (*vec)->el_size > (*vec)->alloc)
+		vec_alloc(vec);
+	else
+		ft_memcpy((*vec)->data + (*vec)->size, el, (*vec)->el_size);
+	++((*vec)->size);
 }

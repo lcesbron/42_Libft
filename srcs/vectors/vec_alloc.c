@@ -1,16 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lc_isspace.c                                       :+:      :+:    :+:   */
+/*   vec_alloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 15:31:34 by lcesbron          #+#    #+#             */
-/*   Updated: 2025/03/03 18:46:31 by lcesbron         ###   ########lyon.fr   */
+/*   Created: 2025/03/03 18:08:15 by lcesbron          #+#    #+#             */
+/*   Updated: 2025/03/03 18:41:55 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	lc_isspace(char c)
+#include "mem.h"
+#include "vectors.h"
+#include <stdlib.h>
+
+char	vec_alloc(t_vec *vec)
 {
-	return ((c >= 9 && c <= 13) || c == ' ');
+	void	*buffer;
+
+	if (!vec->alloc)
+		vec->alloc = VEC_SIZE;
+	else
+		vec->alloc <<= 1;
+	buffer = malloc(vec->alloc);
+	if (!buffer)
+		return (1);
+	ft_memmove(buffer, vec->data, vec->size * vec->el_size);
+	free(vec->data);
+	vec->data = buffer;
+	return (0);
 }

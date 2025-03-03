@@ -6,14 +6,14 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 15:23:04 by lcesbron          #+#    #+#             */
-/*   Updated: 2025/02/21 18:12:42 by lcesbron         ###   ########lyon.fr   */
+/*   Updated: 2025/03/03 18:48:42 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "char.h"
 #include "limits.h"
 
-static void init_strtol(char **str, char **endptr, char *error, int *neg)
+static void	init_strtol(char **str, char **endptr, char *error, int *neg)
 {
 	*endptr = *str;
 	while (lc_isspace(**str))
@@ -24,14 +24,14 @@ static void init_strtol(char **str, char **endptr, char *error, int *neg)
 		++(*str);
 	}
 	else
-		*neg = 1; 
+		*neg = 1;
 	*error = 0;
 }
 
-long int lc_strtol(char *str, char **endptr, int base)
+long int	lc_strtol(char *str, char **endptr, int base)
 {
 	long int	ret;
-	int 		neg;
+	int			neg;
 	char		c;
 	char		error;
 
@@ -43,7 +43,7 @@ long int lc_strtol(char *str, char **endptr, int base)
 			c = *str - '0';
 		else
 			c = ft_tolower(*str) - 'a' + 10;
-		if (c >= base || ((long)(ret * base + c) / base != ret 
+		if (c >= base || ((long)(ret * base + c) / base != ret
 			&& !(neg == -1 && (long)(ret * base + c) == LONG_MIN)))
 			error = 1;
 		else
