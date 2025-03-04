@@ -6,7 +6,7 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 17:13:33 by lcesbron          #+#    #+#             */
-/*   Updated: 2025/03/03 18:46:19 by lcesbron         ###   ########lyon.fr   */
+/*   Updated: 2025/03/04 11:54:00 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ struct s_vec
 // char return values are for errors
 
 t_vec	vec_create(unsigned int el_size);
-char	vec_add(t_vec **vec, void *el);
+char	vec_add(t_vec *vec, void *el);
 char	vec_alloc(t_vec *vec);
+void	vec_free(t_vec *vec);
 
 #endif

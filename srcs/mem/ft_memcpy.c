@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcesbron <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:05:11 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/11/08 11:34:38 by lcesbron         ###   ########.fr       */
+/*   Updated: 2025/03/04 13:22:47 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	while (n)
 	{
 		((unsigned char *)dest)[n - 1] = ((unsigned char *)src)[n - 1];
-		n--;
+		--n;
 	}
 	return (dest);
 }

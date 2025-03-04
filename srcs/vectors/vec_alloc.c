@@ -6,7 +6,7 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 18:08:15 by lcesbron          #+#    #+#             */
-/*   Updated: 2025/03/03 18:41:55 by lcesbron         ###   ########lyon.fr   */
+/*   Updated: 2025/03/04 14:41:13 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	vec_alloc(t_vec *vec)
 		vec->alloc = VEC_SIZE;
 	else
 		vec->alloc <<= 1;
-	buffer = malloc(vec->alloc);
+	buffer = malloc(vec->alloc * vec->el_size);
 	if (!buffer)
 		return (1);
 	ft_memmove(buffer, vec->data, vec->size * vec->el_size);

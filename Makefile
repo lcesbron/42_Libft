@@ -41,7 +41,7 @@ $(NAME): $(OBJS)
 
 .PHONY: test
 test: $(NAME)
-	$(CC) $(CFLAGS) $(CPPFLAGS) test.c -L. -lft -o $@
+	$(CC) $(CFLAGS) $(CPPFLAGS) test.c -L. -lft -g3 -o $@
 
 .PHONY: clean
 clean:

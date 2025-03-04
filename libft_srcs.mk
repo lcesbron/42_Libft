@@ -121,7 +121,9 @@ MATHS_SRCS =	lc_sqrt.c \
 
 VECTORS_DIR = vectors/
 
-VECTORS_SRCS =	vec_create.c
-				vec_add.c
+VECTORS_SRCS =	vec_create.c \
+				vec_add.c \
+				vec_alloc.c \
+				vec_free.c
 
-SRCS += $(addprefix $(MATHS_DIR), $(MATHS_SRCS))
+SRCS += $(addprefix $(VECTORS_DIR), $(VECTORS_SRCS))
