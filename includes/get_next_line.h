@@ -6,7 +6,7 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 10:59:14 by lcesbron          #+#    #+#             */
-/*   Updated: 2024/12/05 15:01:16 by lcesbron         ###   ########lyon.fr   */
+/*   Updated: 2025/03/05 22:34:50 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ char	*get_next_line(int fd);
 
 // UTILS
 
+char	*buffer_to_line(char *buffer, char *line, size_t *el_index, bool *err);
+int		str_line_cpy(char *dest, char *src);
 int		str_line_len(const char *s);
 void	*free_buffer_line(char *buffer, char *line);
-int		str_line_cpy(char *dest, char *src);
 void	minimize_buffer(char *buffer);
-char	*buffer_to_line(char *buffer, char *line, size_t *el_index, bool *err);
 
 #endif
