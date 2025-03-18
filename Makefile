@@ -30,14 +30,14 @@ RM = rm -rf
 .PHONY: all
 all: $(NAME)
 
+$(NAME): $(OBJS)
+	@$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+	@echo "[$(GREEN)✓$(NC)] $(BOLD)$(NAME)$(NC)"
+
 $(BUILD_DIR)%.o: $(SRC_DIR)%.c
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
 	@echo "[$(GREEN)✓$(NC)] $(notdir $<)"
-
-$(NAME): $(OBJS)
-	@$(AR) $(ARFLAGS) $(NAME) $(OBJS)
-	@echo "[$(GREEN)✓$(NC)] $(BOLD)$(NAME)$(NC)"
 
 .PHONY: test
 test: $(NAME)
