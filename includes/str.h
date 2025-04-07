@@ -6,7 +6,7 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 18:54:52 by lcesbron          #+#    #+#             */
-/*   Updated: 2025/03/05 22:34:07 by lcesbron         ###   ########lyon.fr   */
+/*   Updated: 2025/04/07 13:07:52 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 size_t		ft_strlen(const char *s);
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
+double		lc_atof(const char *nptr);
 
 #endif

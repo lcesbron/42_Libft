@@ -62,6 +62,7 @@ STR_SRCS = 	ft_strlen.c \
 		   	ft_strmapi.c \
 		   	ft_striteri.c \
 			lc_strtol.c \
+			lc_atof.c
 
 SRCS += $(addprefix $(STR_DIR), $(STR_SRCS)) 
 
