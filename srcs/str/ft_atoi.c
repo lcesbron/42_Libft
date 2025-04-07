@@ -20,7 +20,7 @@ int	ft_atoi(const char *nptr)
 
 	sign = 1;
 	nb = 0;
-	while (*nptr == ' ' || lc_isspace(*nptr))
+	while (lc_isspace(*nptr))
 		nptr++;
 	if (*nptr == '-' || *nptr == '+')
 	{
