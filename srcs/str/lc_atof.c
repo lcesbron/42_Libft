@@ -6,13 +6,16 @@
 /*   By: lcesbron <lcesbron@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 12:35:32 by lcesbron          #+#    #+#             */
-/*   Updated: 2025/04/07 13:31:38 by lcesbron         ###   ########lyon.fr   */
+/*   Updated: 2025/04/08 01:24:45 by lcesbron         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "char.h"
 
-static void lc_atof_init(const char **nptr, double *mult, double *ret, char *sign)
+// TODO: overflow detection
+
+static void	lc_atof_init(const char **nptr, double *mult, double *ret,
+			char *sign)
 {
 	*sign = 1;
 	*ret = 0.0;
