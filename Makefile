@@ -17,7 +17,7 @@ DEPS = $(patsubst %.c, $(BUILD_DIR)%.d, $(SRCS))
 # --- CONFIG ---
 
 CC = cc
-CFLAGS = -Wall -Wextra # -Werror
+CFLAGS = -Wall -Wextra -Werror
 CPPFLAGS = -I $(INCLUDE_DIR) -MMD -MP
 
 AR = ar
